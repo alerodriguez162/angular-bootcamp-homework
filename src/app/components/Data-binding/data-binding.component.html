@@ -1,0 +1,25 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>Event binding</h2>
+            <button mat-flat-button color="primary" (click)="showAlert()">Haz clic en mí</button>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>One way data binding</h2>
+            <mat-form-field>
+                <input matInput type="text" [value]="message">
+            </mat-form-field>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>Two way data binding</h2>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="messageTwoDataBinding">
+            </mat-form-field>
+            <span>{{ messageTwoDataBinding }}</span>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
