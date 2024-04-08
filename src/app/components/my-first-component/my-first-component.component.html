@@ -1,0 +1,11 @@
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>Module providers - injectable</h2>
+            <mat-list role="list" >
+                <mat-list-item *ngFor="let string of messageFromService" role="listitem">{{ string }}</mat-list-item>
+            </mat-list>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
