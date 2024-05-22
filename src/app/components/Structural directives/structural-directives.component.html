@@ -1,0 +1,32 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>ngFor</h2>
+            <mat-list role="list" >
+                <mat-list-item *ngFor="let string of strings" role="listitem">{{ string }}</mat-list-item>
+            </mat-list>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>ngIf</h2>
+            <mat-list role="list" >
+                <ng-container *ngFor="let string of strings">
+                    <mat-list-item  *ngIf="string !== 'B'" role="listitem">{{ string }}</mat-list-item>
+                </ng-container>
+            </mat-list> 
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>ngSwitch</h2>
+            <mat-list role="list" >
+                <mat-list-item *ngFor="let string of strings" role="listitem" [ngSwitch]="string">
+                    <span *ngSwitchCase="'A'">1</span>
+                    <span *ngSwitchCase="'B'">2</span>
+                    <span *ngSwitchCase="'C'">3</span>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
