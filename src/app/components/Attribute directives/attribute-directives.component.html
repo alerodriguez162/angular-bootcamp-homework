@@ -1,0 +1,16 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>NgClass</h2>
+            <button mat-flat-button color="warn" (click)="toggleActive()">Toggle Red Text</button>
+            <span [ngClass]="{'redText': active}">Hello</span>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="flex">
+            <h2>NgStyle</h2>
+            <button mat-flat-button color="warn" (click)="toggleStyleActive()">Toggle Red Text</button>
+            <span [ngStyle]="{'color': activeStyle ? 'red' : 'black'}">Hello</span>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
